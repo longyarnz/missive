@@ -1,0 +1,27 @@
+section {
+    @apply flex justify-center items-center h-screen;
+
+    div {
+        @apply flex flex-col;
+        min-height: 549px;
+
+        &:first-child {
+            max-width: 513px;
+            margin-right: 50px;
+        }
+
+        &:last-child {
+            min-width: 513px;
+        }
+
+        h1 {
+            @apply text-primary-700 font-sans font-bold;
+            font-size: 28.8px;
+        }
+        
+        form {
+            @apply flex flex-col;
+            max-width: 350px;
+        }
+    }
+}

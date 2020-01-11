@@ -8,7 +8,7 @@ module.exports = {
       lg: '1024px',
     },
     fontFamily: {
-      sans: ['"DM Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans'],
+      sans: ['DM Sans', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans'],
     },
     colors: {
       transparent: 'transparent',
