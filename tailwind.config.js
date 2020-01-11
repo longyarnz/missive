@@ -10,6 +10,12 @@ module.exports = {
     fontFamily: {
       sans: ['DM Sans', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans'],
     },
+    fontSize: {
+      base: '14.2px'
+    },
+    lineHeight: {
+      normal: 1.4
+    },
     colors: {
       transparent: 'transparent',
       black: '#000',

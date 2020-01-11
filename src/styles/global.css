@@ -2,4 +2,8 @@
 
 @import "tailwindcss/components";
 
+* {
+    @apply text-base font-sans leading-normal antialiased;
+}
+
 @import "tailwindcss/utilities";
