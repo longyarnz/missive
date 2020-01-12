@@ -1,0 +1,18 @@
+.userMenu {
+    @apply flex items-center justify-between w-full text-primary-500 bg-gray-150;
+    height: 72px;
+    padding: 0px 20px;
+    margin-bottom: 60px;
+
+    img {
+        @apply mr-4;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+
+    span {
+        @apply overflow-hidden whitespace-no-wrap;
+        text-overflow: ellipsis;
+    }
+}

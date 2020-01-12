@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../styles/sidebar.module.css'
 import { FlatList } from '@bit/lekanmedia.shared-ui.internal.utils'
 import IconButton, { BigIconButton } from '../components/IconButton'
+import UserMenu from '../components/UserMenu'
 import plus from '../images/plus.svg'
 import file from '../images/file.svg'
 import inbox from '../images/inbox.svg'
@@ -41,30 +42,34 @@ const items = [
 export default function Sidebar() {
     return (
         <section className={className}>
-            <BigIconButton icon={plus} text="Compose" />
-
-            <ul>
-                <FlatList
-                    list={items}
-                    listView={i => (
-                        <li key={i.text} className="focus-within:border-black">
-                            <IconButton text={i.text} icon={i.icon} />
-                        </li>
-                    )}
-                />
-            </ul>
-
             <div>
-                <h6>Teams</h6>
+                <BigIconButton icon={plus} text="Compose" />
+                
+                <ul>
+                    <FlatList
+                        list={items}
+                        listView={i => (
+                            <li key={i.text} className="focus-within:border-black">
+                                <IconButton text={i.text} icon={i.icon} />
+                            </li>
+                        )}
+                    />
+                </ul>
 
-                <p>
-                    Invite your teammates to collaborate.
+                <div>
+                    <h6>Teams</h6>
+
+                    <p>
+                        Invite your teammates to collaborate.
                 </p>
 
-                <button>
-                    Set up my team
+                    <button>
+                        Set up my team
                 </button>
+                </div>
             </div>
+
+            <UserMenu name="Obi Nathaniel Ndubisi" />
         </section>
     )
 }

@@ -1,48 +1,53 @@
 .section {
     @apply bg-gray-100 h-screen flex flex-col items-center;
     width: 223px;
-    padding: 60px 20px;
 
-    ul {
-        @apply w-full mb-20;
-
-        li {
-            @apply w-full rounded cursor-pointer;
-            padding: 15px;
-            height: 50px;
-            border-radius: 8px;
-            transition: all .15s ease;
-
-            &:first-child, &.active {
-                @apply bg-gray-200;
+    & > div:first-of-type{
+        @apply mb-auto;
+        padding: 60px 20px;
+        
+        ul {
+            @apply w-full mb-20;
+            
+            li {
+                @apply w-full rounded cursor-pointer;
+                padding: 15px;
+                height: 50px;
+                border-radius: 8px;
+                transition: all .15s ease;
+                
+                &:first-child, &.active {
+                    @apply bg-gray-200;
+                }
+                
+                &:hover {
+                    @apply bg-gray-200;
+                }
             }
-
-            &:hover {
-                @apply bg-gray-200;
+        }
+        
+        div {
+            
+            h6 {
+                @apply text-micro font-bold text-primary-400;
+                margin-bottom: 20px;
             }
-        }
-    }
-
-    div {
-        h6 {
-            @apply text-micro font-bold text-primary-400;
-            margin-bottom: 20px;
-        }
-
-        p {
-            @apply text-center text-primary-500;
-            margin-bottom: 21px;
-        }
-
-        button {
-            @apply w-full bg-magenta-500 text-white flex items-center;
-            border-radius: 70px;
-            height: 40px;
-            padding: 0px 35px;
-            transition: all .25s ease;
-
-            &:hover {
-                @apply bg-magenta-600 shadow-xl;
+            
+            p {
+                @apply text-center text-primary-500;
+                margin-bottom: 21px;
+            }
+            
+            button {
+                @apply w-full bg-magenta-500 text-white flex items-center;
+                border-radius: 70px;
+                height: 40px;
+                padding: 0px 35px;
+                transition: all .25s ease;
+                
+                &:hover {
+                    @apply bg-magenta-600 shadow-xl;
+                }
             }
         }
     }
