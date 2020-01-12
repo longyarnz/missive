@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styles from '../styles/signup.module.css'
+import styles from '../styles/form.module.css'
 import caption from '../images/caption.png'
 
 export default function Signup() {

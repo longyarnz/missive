@@ -7,6 +7,7 @@ export default function IndexPage() {
             <Link className="text-gray-500 underline hover:text-highlight" to="/signup">Sign Up</Link>
             <Link className="text-gray-500 underline hover:text-highlight" to="/login">Login</Link>
             <Link className="text-gray-500 underline hover:text-highlight" to="/reset">Forgot Password</Link>
+            <Link className="text-gray-500 underline hover:text-highlight" to="/dashboard">Dashboard</Link>
         </section>
     )
 }
