@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Missive App`,
+    description: `Missive is a fully integrated email management app supporting Gmail, Yahoo and Outlook. It pulls emails and connected mailboxes and offers a platform to manage all from one app.`,
+    author: `@longyarnz`,
   },
+  pathPrefix: "/missive",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
