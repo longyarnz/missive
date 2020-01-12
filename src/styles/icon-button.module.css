@@ -1,0 +1,31 @@
+.icon-button {
+    @apply w-full flex items-center;
+    transition: all .25s ease;
+
+    img {
+        @apply mr-5;
+        width: 20px;
+    }
+
+    span {
+        @apply text-primary-700;
+        font-size: 15px;
+        padding-top: 2px;
+    }
+}
+
+.big-icon-button {
+    @apply mb-10 bg-highlight-500;
+    border-radius: 70px;
+    padding: 15px 25px;
+    height: 52px;
+
+    span {
+        @apply text-white;
+        font-size: 16px;
+    }
+
+    &:focus {
+        @apply border-0 outline-none;
+    }
+}

@@ -7,3 +7,7 @@
 * {
     @apply text-base font-sans leading-normal antialiased;
 }
+
+button:focus {
+    outline: none;
+}
