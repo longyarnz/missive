@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styles from '../styles/form.module.css'
 import login from '../images/login.png'
+import styles from '../styles/form.module.css'
 
 export default function Login() {
+    const className = `${styles['section']} container mx-auto`;
     return (
-        <section className="container mx-auto">
+        <section className={className}>
             <div>
                 <img src={login} alt="caption" />
             </div>

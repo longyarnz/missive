@@ -4,8 +4,9 @@ import styles from '../styles/form.module.css'
 import caption from '../images/caption.png'
 
 export default function Signup() {
+    const className = `${styles['section']} container mx-auto`;
     return (
-        <section className="container mx-auto">
+        <section className={className}>
             <div>
                 <img src={caption} alt="caption" />
             </div>
