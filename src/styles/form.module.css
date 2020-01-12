@@ -7,7 +7,7 @@ section {
 
         &:first-child {
             @apply mr-20;
-            max-width: 543px;
+            max-width: 570px;
         }
 
         &:last-child {

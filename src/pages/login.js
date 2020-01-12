@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styles from '../styles/form.module.css'
-import caption from '../images/caption.png'
+import login from '../images/login.png'
 
 export default function Login() {
     return (
         <section className={styles.section}>
             <div>
-                <img src={caption} alt="caption" />
+                <img src={login} alt="caption" />
             </div>
 
             <div>

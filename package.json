@@ -42,7 +42,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -b master -d public"
+    "deploy": "gatsby build --prefix-paths && gh-pages -b master -d public -e docs"
   },
   "repository": {
     "type": "git",

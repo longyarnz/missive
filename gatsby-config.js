@@ -4,7 +4,7 @@ module.exports = {
     description: `Missive is a fully integrated email management app supporting Gmail, Yahoo and Outlook. It pulls emails and connected mailboxes and offers a platform to manage all from one app.`,
     author: `@longyarnz`,
   },
-  pathPrefix: "/missive",
+  pathPrefix: "/missive/",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
