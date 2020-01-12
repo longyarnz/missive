@@ -66,10 +66,7 @@ module.exports = {
       green: '#6ec48f',
       extend: {}
     },
-    variants: {
-      backgroundColor: ['responsive', 'hover', 'focus', 'focus-within'],
-      borderColor: ['responsive', 'hover', 'focus', 'focus-within'],
-    },
+    variants: {},
     plugins: []
   }
 }

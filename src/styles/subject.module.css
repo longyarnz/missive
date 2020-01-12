@@ -11,11 +11,11 @@
         }
 
         h2 {
-            @apply text-primary-700 font-bold text-center mb-5;
+            @apply text-primary-700 font-bold text-center mb-8;
         }
 
         p {
-            @apply text-primary-600 text-center mb-5;
+            @apply text-primary-600 text-center mb-8 px-10;
             font-size: 15px;
         }
 
@@ -24,6 +24,11 @@
             font-size: 15px;
             border-radius: 70px;
             height: 50px;
+            transition: all .25s ease;
+
+            &:hover {
+                @apply text-white bg-highlight-500 shadow-xl;
+            }
         }
     }
 }
