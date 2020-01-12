@@ -42,7 +42,7 @@ section {
                     border-radius: 70px ;
                     
                     &:hover {
-                        @apply shadow-xl ;
+                        @apply shadow-xl;
                     }
                 }
             }

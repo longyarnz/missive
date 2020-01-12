@@ -8,6 +8,7 @@
     "autoprefixer": "^9.7.3",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^2.2.31",
     "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-postcss": "^2.1.19",
@@ -41,7 +42,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && -b master -d docs"
+    "deploy": "gatsby build --prefix-paths && gh-pages -b master -d public"
   },
   "repository": {
     "type": "git",
