@@ -5,7 +5,7 @@ import caption from '../images/caption.png'
 
 export default function ForgotPassword() {
     return (
-        <section className={styles.section}>
+        <section className="container mx-auto">
             <div>
                 <img src={caption} alt="caption" />
             </div>

@@ -3,24 +3,27 @@ section {
 
     & > div {
         @apply flex flex-col;
-        min-height: 549px;
 
         &:first-child {
-            @apply mr-20;
-            max-width: 570px;
+            @apply mr-20 flex justify-center;
+            max-width: 513px;
+        }
+        
+        @media screen and (max-width:768px) {
+            width: 50% !important;
         }
 
         &:last-child {
-            min-width: 513px;
+            width: 513px;
         }
 
         h1 {
-            @apply text-primary-700 font-sans font-bold mb-8;
+            @apply text-primary-700 font-sans font-bold mb-12;
             font-size: 28.8px;
         }
 
         h2 {
-            @apply font-medium text-highlight mb-10;
+            @apply font-medium text-highlight-500 mb-10;
             font-size: 18px;
         }
         
@@ -29,20 +32,18 @@ section {
             max-width: 350px;
 
             input {
-                @apply mb-12 bg-gray-100 rounded text-primary-700 font-normal ;
+                @apply mb-12 bg-gray-100 rounded text-primary-700 font-normal;
                 height: 60px;
                 padding: 20px;
-                line-height: 1.4;
-                font-size: 14.2px;
                 border-radius: 10px;
                 transition: all .25s ease;
 
                 &[type="button"] {
-                    @apply bg-highlight text-white cursor-pointer mt-1 ;
+                    @apply bg-highlight-500 text-white cursor-pointer mt-1;
                     border-radius: 70px ;
                     
                     &:hover {
-                        @apply shadow-xl;
+                        @apply shadow-xl bg-highlight-700;
                     }
                 }
             }
@@ -51,7 +52,7 @@ section {
                 @apply block text-right text-primary-700 mb-10 -mt-5 cursor-pointer;
 
                 &:hover {
-                    @apply underline text-highlight;
+                    @apply underline text-highlight-500;
                 }
             }
 
@@ -59,7 +60,7 @@ section {
                 @apply px-6;
 
                 a {
-                    @apply text-highlight cursor-pointer text-center font-normal;
+                    @apply text-highlight-500 cursor-pointer text-center font-normal;
 
                     &:hover {
                         @apply underline;
@@ -76,7 +77,7 @@ section {
                 }
 
                 span a {
-                    @apply text-highlight cursor-pointer text-center;
+                    @apply text-highlight-500 cursor-pointer text-center;
 
                     &:hover {
                         @apply underline;

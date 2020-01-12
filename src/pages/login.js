@@ -5,7 +5,7 @@ import login from '../images/login.png'
 
 export default function Login() {
     return (
-        <section className={styles.section}>
+        <section className="container mx-auto">
             <div>
                 <img src={login} alt="caption" />
             </div>
