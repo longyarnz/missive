@@ -1,4 +1,4 @@
-.icon-button {
+.iconButton {
     @apply w-full flex items-center;
     transition: all .25s ease;
 
@@ -14,7 +14,7 @@
     }
 }
 
-.big-icon-button {
+.bigIconButton {
     @apply mb-10 bg-highlight-500;
     border-radius: 70px;
     padding: 15px 25px;
