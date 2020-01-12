@@ -1,0 +1,20 @@
+.searchBar {
+    @apply w-full bg-gray-100 flex items-center mb-10;
+    height: 52px;
+    padding: 0px 15px;
+    border-radius: 10px;
+
+    &:focus-within {
+        @apply bg-white border shadow-md text-primary-600;
+    }
+
+    i {
+        @apply inline-block text-primary-400;
+        font-size: 18px;
+    }
+
+    input {
+        @apply w-full text-primary-400 bg-transparent px-2;
+        font-size: 16px;
+    }
+}

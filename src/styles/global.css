@@ -36,7 +36,7 @@ h6 {
     font-size: 14.22px;
 }
 
-button:focus {
+button:focus, input:focus {
     outline: none;
 }
 
