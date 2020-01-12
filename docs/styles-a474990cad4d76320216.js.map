@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/styles/form.module.css"],"names":["module","exports"],"mappings":"qGACAA,EAAOC,QAAU,CAAC,MAAQ,4BAA4B,OAAS","file":"styles-a474990cad4d76320216.js","sourcesContent":["// extracted by mini-css-extract-plugin\nmodule.exports = {\"reset\":\"form-module--reset--3gtvX\",\"create\":\"form-module--create--3NjKB\"};"],"sourceRoot":""}
