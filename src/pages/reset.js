@@ -15,7 +15,7 @@ export default function ForgotPassword() {
                 <h2>Enter the email you registered your <br /> account with.</h2>
                 <form method="post">
                     <input type="email" name="email" placeholder="Email Address" />
-                    <input className="reset-button" type="button" value="Send reset password link"/>
+                    <input className={styles['reset']} type="button" value="Send reset password link"/>
                     <footer className="text-center">
                         <Link to="/login">Back to log in</Link>
                     </footer>

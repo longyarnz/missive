@@ -35,21 +35,14 @@ section {
                 line-height: 1.4;
                 font-size: 14.2px;
                 border-radius: 10px;
+                transition: all .25s ease;
 
                 &[type="button"] {
                     @apply bg-highlight text-white cursor-pointer mt-1 ;
                     border-radius: 70px ;
                     
                     &:hover {
-                        @apply shadow-lg ;
-                    }
-                    
-                    &.create {
-                        width: 260px !important;
-                    }
-
-                    &#reset {
-                        @apply inline-block w-full max-w-full !important;
+                        @apply shadow-xl ;
                     }
                 }
             }
@@ -66,7 +59,7 @@ section {
                 @apply px-6;
 
                 a {
-                    @apply text-highlight cursor-pointer text-center;
+                    @apply text-highlight cursor-pointer text-center font-normal;
 
                     &:hover {
                         @apply underline;
@@ -92,4 +85,12 @@ section {
             }
         }
     }
+}
+
+.reset {
+    @apply inline-block w-full mb-6;
+}
+
+.create {
+    width: 260px;
 }

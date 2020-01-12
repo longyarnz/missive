@@ -16,7 +16,7 @@ export default function Signup() {
                     <input type="email" name="email" placeholder="Email Address" />
                     <input type="password" name="password" placeholder="Create a Password" />
                     <input type="password" name="confirm" placeholder="Confirm Password" />
-                    <input className="create" type="button" value="Create Account"/>
+                    <input className={styles['create']} type="button" value="Create Account"/>
                     <footer>Already have an account?&nbsp;<Link to="/login">Log in</Link></footer>
                 </form>
             </div>
