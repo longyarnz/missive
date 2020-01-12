@@ -53,6 +53,18 @@ export default function Sidebar() {
                     )}
                 />
             </ul>
+
+            <div>
+                <h6>Teams</h6>
+
+                <p>
+                    Invite your teammates to collaborate.
+                </p>
+
+                <button>
+                    Set up my team
+                </button>
+            </div>
         </section>
     )
 }
