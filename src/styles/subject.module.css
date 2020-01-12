@@ -1,0 +1,29 @@
+.subject {
+    @apply h-screen bg-white;
+    width: 385px;
+
+    & > div {
+        @apply flex flex-col items-center h-full;
+        padding: 60px 20px;
+
+        img {
+            width: 228px;
+        }
+
+        h2 {
+            @apply text-primary-700 font-bold text-center mb-5;
+        }
+
+        p {
+            @apply text-primary-600 text-center mb-5;
+            font-size: 15px;
+        }
+
+        button {
+            @apply text-highlight-500 bg-white border border-highlight-500 font-medium w-2/3;
+            font-size: 15px;
+            border-radius: 70px;
+            height: 50px;
+        }
+    }
+}

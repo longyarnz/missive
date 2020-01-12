@@ -8,6 +8,34 @@
     @apply text-base font-sans leading-normal antialiased;
 }
 
+h1 {
+    font-size: 28.8px;
+}
+
+h1 {
+    font-size: 28.8px;
+}
+
+h2 {
+    font-size: 25.6px;
+}
+
+h3 {
+    font-size: 22.78px;
+}
+
+h4 {
+    font-size: 20.25px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 14.22px;
+}
+
 button:focus {
     outline: none;
 }
