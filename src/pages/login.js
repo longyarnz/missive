@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styles from '../styles/signup.module.css'
 import caption from '../images/caption.png'
 
-export default function Signup() {
+export default function Login() {
     return (
         <section className={styles.section}>
             <div>
@@ -11,13 +11,17 @@ export default function Signup() {
             </div>
 
             <div>
-                <h1>Let's get you <br /> started.</h1>
+                <h1>Log in to your <br /> account.</h1>
                 <form method="post">
                     <input type="email" name="email" placeholder="Email Address" />
                     <input type="password" name="password" placeholder="Create a Password" />
-                    <input type="password" name="confirm" placeholder="Confirm Password" />
-                    <input className="create" type="button" value="Create Account"/>
-                    <footer>Already have an account?&nbsp;<Link to="/login">Log in</Link></footer>
+                    <Link to="/reset">Forgot password</Link>
+                    <div>
+                        <input type="button" value="Login" />
+                        <span>
+                            New here? <Link to="/signup">Sign Up</Link>
+                        </span>
+                    </div>
                 </form>
             </div>
         </section>

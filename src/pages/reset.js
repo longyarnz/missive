@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styles from '../styles/signup.module.css'
 import caption from '../images/caption.png'
 
-export default function Signup() {
+export default function ForgotPassword() {
     return (
         <section className={styles.section}>
             <div>
@@ -11,13 +11,14 @@ export default function Signup() {
             </div>
 
             <div>
-                <h1>Let's get you <br /> started.</h1>
+                <h1>Let's get you back into <br /> your account.</h1>
+                <h2>Enter the email you registered your <br /> account with.</h2>
                 <form method="post">
                     <input type="email" name="email" placeholder="Email Address" />
-                    <input type="password" name="password" placeholder="Create a Password" />
-                    <input type="password" name="confirm" placeholder="Confirm Password" />
-                    <input className="create" type="button" value="Create Account"/>
-                    <footer>Already have an account?&nbsp;<Link to="/login">Log in</Link></footer>
+                    <input className="reset-button" type="button" value="Send reset password link"/>
+                    <footer className="text-center">
+                        <Link to="/login">Back to log in</Link>
+                    </footer>
                 </form>
             </div>
         </section>

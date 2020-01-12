@@ -1,7 +1,7 @@
 section {
     @apply flex justify-center items-center h-screen;
 
-    div {
+    & > div {
         @apply flex flex-col;
         min-height: 549px;
 
@@ -18,13 +18,18 @@ section {
             @apply text-primary-700 font-sans font-bold mb-8;
             font-size: 28.8px;
         }
+
+        h2 {
+            @apply font-medium text-highlight mb-10;
+            font-size: 18px;
+        }
         
         form {
             @apply flex flex-col;
             max-width: 350px;
 
             input {
-                @apply mb-10 bg-gray-100 rounded text-primary-700 font-normal !important;
+                @apply mb-10 bg-gray-100 rounded text-primary-700 font-normal ;
                 height: 60px;
                 padding: 20px;
                 line-height: 1.4;
@@ -32,21 +37,57 @@ section {
                 border-radius: 10px;
 
                 &[type="button"] {
-                    @apply bg-highlight text-white cursor-pointer !important;
-                    max-width: 260px !important;
-                    border-radius: 70px !important;
-
+                    @apply bg-highlight text-white cursor-pointer mt-1 ;
+                    border-radius: 70px ;
+                    
                     &:hover {
-                        @apply shadow-lg !important;
+                        @apply shadow-lg ;
+                    }
+                    
+                    &.create {
+                        width: 260px !important;
+                    }
+
+                    &#reset {
+                        @apply inline-block w-full max-w-full !important;
                     }
                 }
             }
 
-            footer span {
-                @apply text-highlight cursor-pointer;
+            & > a {
+                @apply block text-right text-primary-700 mb-10 -mt-5 cursor-pointer;
 
                 &:hover {
-                    @apply underline;
+                    @apply underline text-highlight;
+                }
+            }
+
+            footer {
+                @apply px-6;
+
+                a {
+                    @apply text-highlight cursor-pointer text-center;
+
+                    &:hover {
+                        @apply underline;
+                    }
+                }
+            }
+
+            & > div {
+                @apply flex justify-between items-center;
+
+                input {
+                    @apply mb-0 mt-0 ;
+                    width: 190px;
+                }
+
+                span a {
+                    @apply text-highlight cursor-pointer text-center;
+
+                    &:hover {
+                        @apply underline;
+                    }
                 }
             }
         }
