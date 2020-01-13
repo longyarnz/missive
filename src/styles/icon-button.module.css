@@ -43,6 +43,7 @@
     }
     
     i {
+        @apply text-gray-500;
         z-index: 1;
         font-size: 19.2px;
     }

@@ -71,4 +71,8 @@
             @apply mb-2;
         }
     }
+
+    p button:hover {
+        @apply underline;
+    }
 }
