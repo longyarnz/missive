@@ -1,5 +1,6 @@
 import React from 'react'
 import { navigate } from 'gatsby'
+import { Helmet } from 'react-helmet'
 import styles from '../styles/create-team.module.css'
 import { CloseModalButton } from './IconButton';
 import { PrimaryButton } from './Button';
@@ -12,6 +13,10 @@ export default function CreateTeamModal(props) {
 
     return (
         <div className={className}>
+            <Helmet>
+                <title>Setup your team</title>
+            </Helmet>
+            
             <div className={styles['closeWrapper']}>
                 <CloseModalButton onClick={goBack} />
             </div>
