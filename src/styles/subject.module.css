@@ -18,17 +18,5 @@
             @apply text-primary-600 text-center mb-8 px-10;
             font-size: 15px;
         }
-
-        button {
-            @apply text-highlight-500 bg-white border border-highlight-500 font-medium w-2/3;
-            font-size: 15px;
-            border-radius: 70px;
-            height: 50px;
-            transition: all .25s ease;
-
-            &:hover {
-                @apply text-white bg-highlight-500 shadow-xl;
-            }
-        }
     }
 }

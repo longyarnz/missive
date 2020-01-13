@@ -4,17 +4,13 @@
     border-radius: 70px;
     height: 50px;
     transition: all .25s ease;
-
-    &:hover {
-        @apply shadow-xl;
-    }
 }
 
 .primary {
     @apply base-button text-white bg-highlight-500 border;
 
     &:hover {
-        @apply text-highlight-500 bg-white border-highlight-500;
+        @apply text-highlight-500 bg-white border-highlight-500 shadow-xl;
     }
 
     &:active {
@@ -24,8 +20,12 @@
 
 .secondary {
     @apply base-button text-highlight-500 bg-white border border-highlight-500;
-
+    
     &:hover {
-        @apply text-white bg-highlight-500;
+        @apply text-white bg-highlight-500  shadow-xl;
+    }
+
+    &:active {
+        @apply bg-highlight-700 text-white;
     }
 }

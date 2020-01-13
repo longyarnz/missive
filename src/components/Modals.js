@@ -9,6 +9,8 @@ export default function Modals(props) {
     const { pathname } = props.location;
     const createTeam = pathname.includes('/team/create');
 
+    if (pathname.endsWith('/dashboard/')) return null;
+
     return (
         <section className={className}>
             <ShouldRender if={createTeam}>
