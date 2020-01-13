@@ -1,4 +1,5 @@
 import React from 'react'
+import {navigate } from 'gatsby'
 import styles from '../styles/sidebar.module.css'
 import { FlatList } from '@bit/lekanmedia.shared-ui.internal.utils'
 import IconButton, { BigIconButton } from '../components/IconButton'
@@ -39,7 +40,14 @@ const items = [
     },
 ]
 
-export default function Sidebar() {
+export default function Sidebar(props) {
+    const goToSetup = () => navigate(
+        '/dashboard/team/create',
+        {
+            state: {back: props.location.pathname}
+        }
+    );
+
     return (
         <section className={className}>
             <div>
@@ -61,11 +69,11 @@ export default function Sidebar() {
 
                     <p>
                         Invite your teammates to collaborate.
-                </p>
+                    </p>
 
-                    <button>
+                    <button onClick={goToSetup}>
                         Set up my team
-                </button>
+                    </button>
                 </div>
             </div>
 

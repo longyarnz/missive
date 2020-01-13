@@ -9,7 +9,7 @@ export default function Dashboard(props) {
     const className = `${styles['section']}`;
     return (
         <section className={className}>
-            <Sidebar />
+            <Sidebar location={props.location} />
             <Subject />
             <View />
             <Modals location={props.location} />
