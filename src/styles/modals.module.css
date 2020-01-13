@@ -1,0 +1,4 @@
+.modals {
+    @apply w-screen fixed h-screen flex justify-center items-center;
+    background-color: rgb(63, 64, 95, .41);
+}
