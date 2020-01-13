@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Olalekan Ayodele <longyarnz@gmail.com>",
   "dependencies": {
+    "@bit/lekanmedia.shared-ui.internal.should-render": "^1.0.0",
     "@bit/lekanmedia.shared-ui.internal.utils": "^0.0.1",
     "autoprefixer": "^9.7.3",
     "gatsby": "^2.18.12",

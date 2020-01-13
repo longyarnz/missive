@@ -798,6 +798,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@bit/lekanmedia.shared-ui.internal.should-render@^1.0.0":
+  version "1.0.0"
+  resolved "https://node.bitsrc.io/lekanmedia.shared-ui.internal.should-render/-/lekanmedia.shared-ui.internal.should-render-1.0.0.tgz#068b3b0556542ccff879f383872e57f45d098e1e"
+  integrity sha1-Bos7BVZULM/4efODhy5X9F0Jjh4=
+
 "@bit/lekanmedia.shared-ui.internal.utils@^0.0.1":
   version "0.0.1"
   resolved "https://node.bitsrc.io/lekanmedia.shared-ui.internal.utils/-/lekanmedia.shared-ui.internal.utils-0.0.1.tgz#ac7ea3ae3e86f10b26f5ab8fd8d07b6d41a937ed"
