@@ -2,7 +2,7 @@
     @apply bg-white border-2 border-highlight-500 shadow-2xl;
     border-radius: 10px;
     width: 470px;
-    height: 470px;
+    min-height: 470px;
     padding: 28px;
 
     div.closeWrapper {
@@ -36,6 +36,10 @@
 
     h4 {
         @apply text-center text-primary-700 font-bold mb-10;
+    }
+
+    p {
+        @apply text-center text-primary-500 -mt-4;
     }
 
     & > button {
