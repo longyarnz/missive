@@ -29,3 +29,38 @@
         @apply border-0 outline-none;
     }
 }
+
+.closeModal {
+    @apply flex items-center justify-center relative;
+
+    &::before {
+        @apply absolute bg-gray-200;
+        content: '';
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        transition: all .25s ease;
+    }
+    
+    i {
+        z-index: 1;
+        font-size: 19.2px;
+        transition: all .25s ease;
+    }
+    
+    &:hover {
+        &::before {
+            @apply shadow-md;
+        }
+
+        i {
+            @apply text-red;
+        }
+    }
+    
+    &:active {
+        &::before {
+            @apply shadow-md bg-gray-500;
+        }
+    }
+}

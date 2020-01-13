@@ -1,0 +1,31 @@
+.base-button {
+    @apply border font-medium w-2/3;
+    font-size: 15px;
+    border-radius: 70px;
+    height: 50px;
+    transition: all .25s ease;
+
+    &:hover {
+        @apply shadow-xl;
+    }
+}
+
+.primary {
+    @apply base-button text-white bg-highlight-500 border;
+
+    &:hover {
+        @apply text-highlight-500 bg-white border-highlight-500;
+    }
+
+    &:active {
+        @apply bg-highlight-200;
+    }
+}
+
+.secondary {
+    @apply base-button text-highlight-500 bg-white border border-highlight-500;
+
+    &:hover {
+        @apply text-white bg-highlight-500;
+    }
+}
