@@ -3,7 +3,8 @@ module.exports = {
     float: false,
     object: false,
     objectPosition: false,
-    visibility: false
+    visibility: false,
+    opacity: false
   },
   theme: {
     fontFamily: {
