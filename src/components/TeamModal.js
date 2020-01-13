@@ -11,10 +11,10 @@ const emails = {};
 const className = styles['createTeam'];
 const goBack = () => navigate('/dashboard/');
 const goToInvite = () => navigate('/dashboard/team/invite');
+const goToComplete = () => navigate('/dashboard/team/complete');
 const addMails = ({ target }) => emails[target.name] = target.value;
 
 export function CreateTeamModal() {
-    console.log(styles['createTeam']);
     return (
         <div className={className}>
             <Helmet>
@@ -89,7 +89,29 @@ export function InviteMembersModal() {
                 </button>
             </p>
 
-            <PrimaryButton text="Invite People" />
+            <PrimaryButton text="Invite People" onClick={goToComplete} />
+        </div>
+    )
+}
+
+export function CompleteSetupModal() {
+    const newClass = `${className} flex flex-col item-center justify-center`;
+
+    return (
+        <div className={newClass}>
+            <Helmet>
+                <title>Invites Sent</title>
+            </Helmet>
+
+            <div className={styles['imgWrapper']}>
+                <img src={teamBanner} alt="team banner" />
+            </div>
+
+            <h4>
+                Invites sent!
+            </h4>
+
+            <PrimaryButton text="Done" onClick={goBack} />
         </div>
     )
 }
