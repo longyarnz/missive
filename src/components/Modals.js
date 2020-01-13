@@ -1,7 +1,7 @@
 import React from 'react'
 import ShouldRender from '@bit/lekanmedia.shared-ui.internal.should-render'
 import { CreateTeamModal, InviteMembersModal, CompleteSetupModal } from './TeamModal'
-import { ConnectMailModal, AccountTypeModal } from './MailModal.js'
+import { ConnectMailModal, AccountTypeModal, AccountAccessModal } from './MailModal.js'
 import styles from '../styles/modals.module.css'
 
 const className = styles['modals'];
@@ -13,6 +13,7 @@ export default function Modals(props) {
     const completeSetup = pathname.includes('/team/complete');
     const connectAccount = pathname.includes('/account/connect');
     const accountType = pathname.includes('/account/type');
+    const access = pathname.includes('/account/access');
 
     if (/dashboard(\/*)$/.test(pathname)) return null;
 
@@ -36,6 +37,10 @@ export default function Modals(props) {
 
             <ShouldRender if={accountType}>
                 <AccountTypeModal />
+            </ShouldRender> 
+
+            <ShouldRender if={access}>
+                <AccountAccessModal />
             </ShouldRender> 
         </section>
     )

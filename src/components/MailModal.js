@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { navigate } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import { FlatList } from '@bit/lekanmedia.shared-ui.internal.utils'
 import { PrimaryButton } from './Button';
 import styles from '../styles/mail-modal.module.css'
 import gmail from '../images/gmail.svg'
@@ -22,13 +21,19 @@ function MailButton({ src, alt, text, onClick }) {
     )
 }
 
-function TypeButton({ checked, secured, onClick }) {
-    const type = checked ? 'radio_button_checked' : 'radio_button_unchecked';
+function TypeButton({ checked, secured, setActive, position }) {
+    const active = checked[position];
+    const type = active ? 'radio_button_checked' : 'radio_button_unchecked';
     const title = secured ? 'Yes, this is a private account.' : 'No, this is a shared account.';
     const subtitle = secured ? 'Messages will be private unless you share them.' : 'Select who has access.';
+    const selectOption = () => {
+        const selections = [ false, false ];
+        selections[position] = !active;
+        setActive(selections);
+    }
 
     return (
-        <button className={styles['typeButton']} onClick={onClick}>
+        <button className={styles['typeButton']} onClick={selectOption}>
             <i className="material-icons">{type}</i>
             <span>
                 <h5>{title}</h5>
@@ -64,6 +69,8 @@ export function ConnectMailModal() {
 }
 
 export function AccountTypeModal() {
+    const [active, setActive] = useState([false, false]);
+
     return (
         <div className={className}>
             <Helmet>
@@ -75,8 +82,27 @@ export function AccountTypeModal() {
             </h4>
 
             <div className={styles['inputWrapper']}>
-                <TypeButton checked={false} secured={true} onClick={goToType} />
-                <TypeButton checked={false} secured={false} onClick={goToType} />
+                <TypeButton checked={active} secured={true} setActive={setActive} position={0} />
+                <TypeButton checked={active} secured={false} setActive={setActive} position={1} />
+            </div>
+
+            <PrimaryButton text="Continue" onClick={goToAccess} />
+        </div>
+    )
+}
+
+export function AccountAccessModal() {
+    return (
+        <div className={className}>
+            <Helmet>
+                <title>Provide Access</title>
+            </Helmet>
+
+            <h4>
+                Who has access to the account?
+            </h4>
+
+            <div className={styles['inputWrapper']}>
             </div>
 
             <PrimaryButton text="Continue" onClick={goToAccess} />
