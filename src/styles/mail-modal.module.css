@@ -1,0 +1,52 @@
+.connectMail {
+    @apply bg-white border-2 border-highlight-500 shadow-2xl flex flex-col items-center justify-center;
+    border-radius: 10px;
+    width: 460px;
+    min-height: 400px;
+    padding: 28px 55px;
+
+    h4 {
+        @apply text-center text-primary-700 font-bold mb-10;
+    }
+
+    div.inputWrapper {
+        @apply flex flex-col items-center justify-around w-full;
+    }
+
+    & > button {
+        @apply block mx-auto;
+    }
+}
+
+.mailButton {
+    @apply flex items-center border border-gray-300 w-full mb-5;
+    height: 56px;
+    padding: 0px 20px;
+    border-radius: 10px;
+    transition: all .25s ease;
+
+    span {
+        @apply text-primary-600 ml-5;
+        font-size: 18px;
+    }
+
+    &:hover {
+        @apply border-highlight-500;
+
+        &:first-child {
+            border-color: #fbbc05;
+        }
+
+        &:nth-child(2) {
+            border-color: #0f78d3;
+        }
+
+        &:last-child {
+            border-color: #eb3c00;
+        }
+    }
+
+    &:active {
+        @apply bg-gray-150;
+    }
+}
