@@ -3,14 +3,14 @@
     border-radius: 10px;
     width: 460px;
     min-height: 400px;
-    padding: 28px 55px;
+    padding: 28px 40px;
 
     h4 {
         @apply text-center text-primary-700 font-bold mb-10;
     }
 
     div.inputWrapper {
-        @apply flex flex-col items-center justify-around w-full;
+        @apply flex flex-col items-center justify-around w-full mb-5;
     }
 
     & > button {
@@ -43,6 +43,47 @@
 
         &:last-child {
             border-color: #eb3c00;
+        }
+    }
+
+    &:active {
+        @apply bg-gray-150;
+    }
+}
+
+.typeButton {
+    @apply flex items-start border border-gray-300 w-full mb-5;
+    height: 80px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all .25s ease;
+    
+    &:hover {
+        @apply border-gray-600;
+        
+        & > i {
+            @apply text-gray-900;
+        }
+    }
+    
+    & > i {
+        @apply text-gray-400 mr-2;
+        font-size: 18px;
+        transition: all .25s ease;
+    }
+    
+    & > span {
+        h5 {
+            @apply text-primary-600 text-left;
+            font-size: 15px;
+        }
+        
+        span {
+            @apply text-primary-400 text-left flex items-center;
+            
+            i {
+                @apply text-highlight-500;
+            }
         }
     }
 
