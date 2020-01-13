@@ -1,3 +1,5 @@
+@import 'scroll-bar.module.css';
+
 .createTeam {
     @apply bg-white border-2 border-highlight-500 shadow-2xl;
     border-radius: 10px;
@@ -11,7 +13,7 @@
     }
     
     div.imgWrapper {
-        @apply flex items-center justify-center mb-10;
+        @apply flex items-center justify-center mb-6;
 
         img {
             height: 60px;
@@ -25,7 +27,7 @@
             @apply border-b-2 border-gray-200;
             height: 34px;
             width: 324px;
-            font-size: 18px;
+            font-size: 16px;
             padding: 5px 0px;
 
             &:focus {
@@ -39,10 +41,34 @@
     }
 
     p {
-        @apply text-center text-primary-500 -mt-4;
+        @apply text-center text-primary-500 -mt-4 mb-8;
+
+        &:last-of-type {
+            @apply text-red cursor-pointer;
+
+            &:hover {
+                @apply underline;
+            }
+        }
     }
 
     & > button {
         @apply block mx-auto;
+    }
+}
+
+.invite {
+    max-height: 600px;
+
+    div.inputWrapper {
+        @apply flex-col justify-start mb-10 mx-auto;
+        @extend .scrollNice;
+        max-height: 120px;
+        overflow-y: auto;
+        width: calc(100% - 64px);   
+
+        input {
+            @apply mb-2;
+        }
     }
 }

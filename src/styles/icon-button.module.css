@@ -45,16 +45,15 @@
     i {
         z-index: 1;
         font-size: 19.2px;
-        transition: all .25s ease;
     }
     
     &:hover {
         &::before {
-            @apply shadow-md;
+            @apply shadow-md bg-red;
         }
 
         i {
-            @apply text-red;
+            @apply text-white;
         }
     }
     

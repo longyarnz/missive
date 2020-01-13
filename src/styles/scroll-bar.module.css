@@ -1,0 +1,19 @@
+.scrollNice {
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        @apply bg-gray-150;
+        border-radius: 30px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        @apply bg-gray-300;
+        border-radius: 30px;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+        @apply bg-gray-300;
+    }
+}
