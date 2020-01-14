@@ -11,9 +11,9 @@ import outlook from '../images/outlook.svg'
 import teamBanner from '../images/team-banner.png'
 
 const className = styles['connectMail'];
-const goBack = () => navigate('/dashboard');
-const goToType = () => navigate('/dashboard/account/type');
-const goToAccess = () => navigate('/dashboard/account/access');
+const goBack = () => navigate('/dashboard', { replace: true });
+const goToType = () => navigate('/dashboard/account/type', { replace: true });
+const goToAccess = () => navigate('/dashboard/account/access', { replace: true });
 
 function MailButton({ src, alt, text, onClick }) {
     return (
@@ -98,7 +98,7 @@ export function AccountTypeModal() {
     )
 }
 
-export function AccountAccessModal(props) {
+export function AccountAccessModal({ location }) {
     const [box, setBox] = useState(false);
     const onClickBox = () => setBox(!box);
     const boxState = box ? 'check_box' : 'check_box_outline_blank';
@@ -106,7 +106,8 @@ export function AccountAccessModal(props) {
     const goToSetup = () => navigate(
         '/dashboard/team/create',
         {
-            state: { back: props.location.pathname }
+            state: { back: location.pathname },
+            replace: true
         }
     );
 

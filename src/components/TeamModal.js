@@ -9,11 +9,11 @@ import teamBanner from '../images/team-banner.png'
 
 const emails = {};
 const className = styles['createTeam'];
-const goBack = () => navigate('/dashboard/');
+const goBack = () => navigate('/dashboard/', { replace: true });
 const addMails = ({ target }) => emails[target.name] = target.value;
 
 export function CreateTeamModal({ location }) {
-    const goToInvite = () => navigate('/dashboard/team/invite', { state: location.state });
+    const goToInvite = () => navigate('/dashboard/team/invite', { state: location.state, replace: true });
     
     return (
         <div className={className}>
@@ -45,7 +45,7 @@ export function CreateTeamModal({ location }) {
 export function InviteMembersModal({ location }) {
     const [ people, setPeople ] = useState(1);
     const list = new Array(people).fill('');
-    const goToComplete = () => navigate('/dashboard/team/complete', { state: location.state });
+    const goToComplete = () => navigate('/dashboard/team/complete', { state: location.state, replace: true });
     
     return (
         <div className={`${className} ${styles['invite']}`}>
@@ -96,9 +96,8 @@ export function InviteMembersModal({ location }) {
 }
 
 export function CompleteSetupModal({ location }) {
-    const url = (location && location.state && location.state.back) || '/dashboard';
-    console.log(url);
-    const goBackToAccess = () => navigate(url);
+    const url = location.state && location.state.back.includes('/account/access') ? '/dashboard/account/access' : '/dashboard/';
+    const goBackToAccess = () => navigate(url, { replace: true });
     const newClass = `${className} flex flex-col item-center justify-center`;
     
     return (
