@@ -1,4 +1,4 @@
-.searchBar {
+.search {
     @apply w-full bg-gray-100 flex items-center mb-10;
     height: 52px;
     padding: 0px 15px;
@@ -12,9 +12,24 @@
         @apply inline-block text-primary-400;
         font-size: 18px;
     }
-
+    
     input {
         @apply w-full text-primary-400 bg-transparent px-2;
+        font-size: 16px;
+    }
+}
+
+.team {
+    @apply w-full h-full bg-transparent flex items-center;
+    padding: 0px 20px;
+    
+    i {
+        @apply inline-block text-gray-600 mr-2;
+        font-size: 24px;
+    }
+    
+    input {
+        @apply w-full text-primary-400 bg-transparent pl-2;
         font-size: 16px;
     }
 }
