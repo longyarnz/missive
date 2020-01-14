@@ -97,7 +97,8 @@ export function InviteMembersModal({ location }) {
 
 export function CompleteSetupModal({ location }) {
     const url = (location && location.state && location.state.back) || '/dashboard';
-    const goBack = () => navigate(url);
+    console.log(url);
+    const goBackToAccess = () => navigate(url);
     const newClass = `${className} flex flex-col item-center justify-center`;
     
     return (
@@ -114,7 +115,7 @@ export function CompleteSetupModal({ location }) {
                 Invites sent!
             </h4>
 
-            <PrimaryButton text="Done" onClick={goBack} />
+            <PrimaryButton text="Done" onClick={goBackToAccess} />
         </div>
     )
 }
