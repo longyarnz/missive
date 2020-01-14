@@ -9,6 +9,7 @@ import outlook from '../images/outlook.svg'
 import ShouldRender from '@bit/lekanmedia.shared-ui.internal.should-render';
 
 const className = styles['connectMail'];
+const goBack = () => navigate('/dashboard');
 const goToType = () => navigate('/dashboard/account/type');
 const goToAccess = () => navigate('/dashboard/account/access');
 
@@ -70,6 +71,8 @@ export function ConnectMailModal() {
 
 export function AccountTypeModal() {
     const [active, setActive] = useState([false, false]);
+    const disabled = !active[0] && !active[1];
+    const onClick = disabled ? null : active[0] ? goBack : goToAccess;
 
     return (
         <div className={className}>
@@ -86,7 +89,9 @@ export function AccountTypeModal() {
                 <TypeButton checked={active} secured={false} setActive={setActive} position={1} />
             </div>
 
-            <PrimaryButton text="Continue" onClick={goToAccess} />
+            <ShouldRender if={!disabled}>
+                <PrimaryButton disabled={disabled} text="Continue" onClick={onClick} />
+            </ShouldRender>
         </div>
     )
 }

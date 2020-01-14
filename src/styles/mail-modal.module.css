@@ -62,7 +62,7 @@
         @apply border-gray-600;
         
         & > i {
-            @apply text-gray-900;
+            @apply text-highlight-500;
         }
     }
     
