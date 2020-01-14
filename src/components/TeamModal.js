@@ -96,7 +96,7 @@ export function InviteMembersModal({ location }) {
 }
 
 export function CompleteSetupModal({ location }) {
-    const url = location && location.state && location.state.back || '/dashboard';
+    const url = (location && location.state && location.state.back) || '/dashboard';
     const goBack = () => navigate(url);
     const newClass = `${className} flex flex-col item-center justify-center`;
     
