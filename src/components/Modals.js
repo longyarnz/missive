@@ -15,7 +15,7 @@ export default function Modals(props) {
     const accountType = pathname.includes('/account/type');
     const access = pathname.includes('/account/access');
 
-    if (/dashboard(\/*)$/.test(pathname)) return null;
+    if (!/dashboard\/(team|account)/.test(pathname)) return null;
 
     return (
         <section className={className}>
