@@ -3,7 +3,7 @@
 .wrapper {
     @extend .scrollNice;
     @apply w-full bg-gray-100 border-t border-gray-200 overflow-y-auto;
-    min-height: calc(100% - 88px);
+    height: calc(100% - 88px);
 }
 
 .dayHeader {
