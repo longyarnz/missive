@@ -10,11 +10,11 @@ import teamBanner from '../images/team-banner.png'
 const emails = {};
 const className = styles['createTeam'];
 const goBack = () => navigate('/dashboard/');
-const goToInvite = () => navigate('/dashboard/team/invite');
-const goToComplete = () => navigate('/dashboard/team/complete');
 const addMails = ({ target }) => emails[target.name] = target.value;
 
-export function CreateTeamModal() {
+export function CreateTeamModal({ location }) {
+    const goToInvite = () => navigate('/dashboard/team/invite', { state: location.state });
+    
     return (
         <div className={className}>
             <Helmet>
@@ -42,10 +42,11 @@ export function CreateTeamModal() {
     )
 }
 
-export function InviteMembersModal() {
+export function InviteMembersModal({ location }) {
     const [ people, setPeople ] = useState(1);
     const list = new Array(people).fill('');
-
+    const goToComplete = () => navigate('/dashboard/team/complete', { state: location.state });
+    
     return (
         <div className={`${className} ${styles['invite']}`}>
             <Helmet>
@@ -94,9 +95,11 @@ export function InviteMembersModal() {
     )
 }
 
-export function CompleteSetupModal() {
+export function CompleteSetupModal({ location }) {
+    const url = location && location.state && location.state.back || '/dashboard';
+    const goBack = () => navigate(url);
     const newClass = `${className} flex flex-col item-center justify-center`;
-
+    
     return (
         <div className={newClass}>
             <Helmet>

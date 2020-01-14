@@ -20,15 +20,15 @@ export default function Modals(props) {
     return (
         <section className={className}>
             <ShouldRender if={createTeam}>
-                <CreateTeamModal />
+                <CreateTeamModal location={props.location} />
             </ShouldRender> 
 
             <ShouldRender if={inviteMembers}>
-                <InviteMembersModal />
+                <InviteMembersModal location={props.location} />
             </ShouldRender> 
 
             <ShouldRender if={completeSetup}>
-                <CompleteSetupModal />
+                <CompleteSetupModal location={props.location} />
             </ShouldRender> 
 
             <ShouldRender if={connectAccount}>
@@ -40,7 +40,7 @@ export default function Modals(props) {
             </ShouldRender> 
 
             <ShouldRender if={access}>
-                <AccountAccessModal />
+                <AccountAccessModal location={props.location} />
             </ShouldRender> 
         </section>
     )

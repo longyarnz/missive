@@ -9,8 +9,52 @@
         @apply text-center text-primary-700 font-bold mb-10;
     }
 
+    p button{
+        @apply text-center text-primary-500 -mt-4 mb-6 flex items-center cursor-pointer;
+
+        i {
+            @apply mr-2;
+        }
+    }
+
     div.inputWrapper {
         @apply flex flex-col items-center justify-around w-full mb-5;
+    }
+    
+    div.teamBox {
+        @apply flex flex-col items-center justify-start w-full mb-8 border border-gray-300;
+        border-radius: 10px;
+        height: 280px;
+        
+        & > div:first-child {
+            height: 50px;
+        }
+
+        & > div:last-child {
+            @apply flex flex-col items-center justify-center border-t border-gray-300 w-full;
+            height: calc(100% - 50px);
+
+            p {
+                @apply text-primary-600 mb-6;
+            }
+            
+            img {
+                @apply mb-6;
+                width: 100px;
+            }
+
+            button {
+                @apply w-1/2 bg-white text-primary-700 border border-magenta-500 flex items-center justify-center;
+                border-radius: 70px;
+                height: 40px;
+                padding: 0px 35px;
+                transition: all .25s ease;
+                
+                &:hover {
+                    @apply bg-magenta-500 shadow-xl text-white;
+                }
+            }
+        }
     }
 
     & > button {
