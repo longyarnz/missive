@@ -1,12 +1,12 @@
 .subject {
-    @apply h-screen bg-white;
+    @apply h-screen bg-white border-l border-r border-gray-200;
     width: 385px;
 
     & > div {
         @apply flex flex-col items-center h-full;
-        padding: 60px 20px;
+        padding: 60px 0px 0px;
 
-        img {
+        & > img {
             width: 228px;
         }
 

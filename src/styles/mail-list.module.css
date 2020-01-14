@@ -1,0 +1,54 @@
+@import 'scroll-bar.module.css';
+
+.wrapper {
+    @extend .scrollNice;
+    @apply w-full bg-gray-100 border-t border-gray-200 overflow-y-auto;
+    min-height: calc(100% - 88px);
+}
+
+.dayHeader {
+    @apply text-primary-500 flex items-center bg-white border-b border-gray-200;
+    height: 26px;
+    padding-left: 10px;
+    font-size: 12.4px;
+}
+
+.subjectTab {
+    @apply flex justify-start border-b border-gray-200;
+    padding: 15px 15px;
+    height: 96px;
+
+    & > img {
+        width: 15px;
+        height: 15px;
+        margin: 3px 15px 0px 0px;
+    }
+
+    & > figcaption {
+        @apply flex flex-col justify-start;
+        width: calc(100% - 30px);
+        
+        & > h5 {
+            @apply flex items-center justify-between mb-2;
+
+            span:first-child {
+                @apply text-primary-700;
+                font-size: 15px;
+            }
+            
+            span:last-child {
+                @apply text-primary-600;
+                font-size: 12.4px;
+            }
+        }
+        
+        & > h6 {
+            @apply font-normal text-primary-600;
+        }
+        
+        & > span {
+            @apply text-primary-400 inline-block overflow-hidden whitespace-no-wrap;
+            text-overflow: ellipsis;
+        }
+    }
+}
