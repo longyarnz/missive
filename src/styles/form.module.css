@@ -31,6 +31,10 @@
             @apply flex flex-col;
             max-width: 350px;
 
+            p {
+                @apply text-red;
+            }
+
             input {
                 @apply mb-12 bg-gray-100 rounded text-primary-700 font-normal;
                 height: 60px;
@@ -38,7 +42,7 @@
                 border-radius: 10px;
                 transition: all .25s ease;
 
-                &[type="button"] {
+                &[type="submit"] {
                     @apply bg-highlight-500 text-white cursor-pointer mt-1;
                     border-radius: 70px ;
                     
