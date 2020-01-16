@@ -14,6 +14,7 @@ const className = styles['connectMail'];
 const goBack = () => navigate('/dashboard', { replace: true });
 const goToType = () => navigate('/dashboard/account/type', { replace: true });
 const goToAccess = () => navigate('/dashboard/account/access', { replace: true });
+const goToInbox = () => navigate('/dashboard/inbox', { replace: true });
 
 function MailButton({ src, alt, text, onClick }) {
     return (
@@ -140,7 +141,7 @@ export function AccountAccessModal({ location }) {
                 </div>
             </div>
 
-            <PrimaryButton text="Continue" onClick={goBack} />
+            <PrimaryButton text="Continue" onClick={goToInbox} />
         </div>
     )
 }

@@ -96,7 +96,7 @@ export function InviteMembersModal({ location }) {
 }
 
 export function CompleteSetupModal({ location }) {
-    const url = location.state && location.state.back.includes('/account/access') ? '/dashboard/account/access' : '/dashboard/';
+    const url = location.state && location.state.back.includes('/account/access') ? '/dashboard/account/access' : '/dashboard/inbox';
     const goBackToAccess = () => navigate(url, { replace: true });
     const newClass = `${className} flex flex-col item-center justify-center`;
     
