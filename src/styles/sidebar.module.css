@@ -3,7 +3,7 @@
     width: 223px;
 
     & > div:first-of-type{
-        @apply mb-auto;
+        @apply mb-auto w-full;
         padding: 60px 20px;
         
         ul {

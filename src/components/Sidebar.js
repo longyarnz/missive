@@ -1,9 +1,10 @@
 import React from 'react'
-import {navigate } from 'gatsby'
+import { navigate } from 'gatsby'
 import styles from '../styles/sidebar.module.css'
 import { FlatList } from '@bit/lekanmedia.shared-ui.internal.utils'
+import ShouldRender from '@bit/lekanmedia.shared-ui.internal.should-render'
 import IconButton, { BigIconButton } from '../components/IconButton'
-import UserMenu from '../components/UserMenu'
+import { UserMenu, TeamMenu } from '../components/UserMenu'
 import plus from '../images/plus.svg'
 import file from '../images/file.svg'
 import inbox from '../images/inbox.svg'
@@ -40,19 +41,21 @@ const items = [
     },
 ]
 
-export default function Sidebar(props) {
+export default function Sidebar({ location }) {
     const goToSetup = () => navigate(
         '/dashboard/team/create',
         {
-            state: {back: props.location.pathname}
+            state: { back: location.pathname }
         }
     );
+
+    const inbox = location.pathname.includes('inbox');
 
     return (
         <section className={className}>
             <div>
                 <BigIconButton icon={plus} text="Compose" />
-                
+
                 <ul>
                     <FlatList
                         list={items}
@@ -67,13 +70,19 @@ export default function Sidebar(props) {
                 <div>
                     <h6>Teams</h6>
 
-                    <p>
-                        Invite your teammates to collaborate.
-                    </p>
+                    <ShouldRender if={inbox}>
+                        <TeamMenu name="Obi Nathaniel Ndubisi" />
+                    </ShouldRender>
 
-                    <button onClick={goToSetup}>
-                        Set up my team
-                    </button>
+                    <ShouldRender if={!inbox}>
+                        <p>
+                            Invite your teammates to collaborate.
+                        </p>
+
+                        <button onClick={goToSetup}>
+                            Set up my team
+                        </button>
+                    </ShouldRender>
                 </div>
             </div>
 
