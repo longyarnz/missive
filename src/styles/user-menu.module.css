@@ -2,17 +2,28 @@
     @apply flex items-center justify-between w-full text-primary-500 bg-gray-150;
     height: 50px;
     padding: 0px 20px;
-    /* margin-bottom: 60px; */
 
     img {
-        @apply mr-4;
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         border-radius: 50%;
     }
 
     span {
         @apply overflow-hidden whitespace-no-wrap;
         text-overflow: ellipsis;
+        width: 60%;
+    }
+
+    i {
+        margin-right: -8px;
+    }
+}
+
+.teamMenu {
+    @apply bg-transparent p-0;
+
+    i {
+        margin-right: 0px;
     }
 }
