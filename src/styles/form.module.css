@@ -46,6 +46,10 @@
                         @apply shadow-xl bg-highlight-700;
                     }
                 }
+
+                &:hover, &:focus {
+                    @apply border border-highlight-300;
+                }
             }
 
             & > a {

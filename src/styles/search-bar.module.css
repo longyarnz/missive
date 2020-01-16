@@ -5,7 +5,7 @@
     padding: 0px 15px;
     border-radius: 10px;
 
-    &:focus-within {
+    &:focus-within, &:hover {
         @apply bg-white border shadow-md text-primary-400;
     }
 
