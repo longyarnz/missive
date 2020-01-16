@@ -40,7 +40,7 @@ export default function Signup() {
     const [error, setError] = useState(null);
     const className = `${styles['section']} container mx-auto`;
 
-    const submitForm = e => {
+    const createAccount = e => {
         e.preventDefault();
         const form = new FormData(e.target);
         const email = form.get('email');
@@ -53,7 +53,7 @@ export default function Signup() {
         
         else {
             new Store(email, password);
-            navigate('/dashboard/');
+            navigate('/dashboard/', { replace: true });
         }
     }
 
@@ -66,7 +66,7 @@ export default function Signup() {
             <div>
                 <h1>Let's get you <br /> started.</h1>
 
-                <form method="post" onSubmit={submitForm} autoComplete="off">
+                <form method="post" onSubmit={createAccount} autoComplete="off">
                     <p>{error}</p>
                     <input type="email" required name="email" onChange={checkEmail} placeholder="Email Address" />
                     <input type="password" required name="password" onChange={confirmPassword} placeholder="Create a Password" />
