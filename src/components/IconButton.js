@@ -28,3 +28,13 @@ export function CloseModalButton({ onClick }) {
         </button>
     )
 }
+
+export function CloseNotificationButton({ onClick }) {
+    const className = `${styles['closeModal']}`;
+    
+    return (
+        <button className={className} onClick={onClick}>
+            <i className="material-icons">close</i>
+        </button>
+    )
+}

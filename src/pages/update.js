@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
 import styles from '../styles/form.module.css'
 import caption from '../images/forgot.png'
 

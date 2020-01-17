@@ -1,0 +1,8 @@
+.wrapper {
+    @apply bg-highlight-500;
+    height: 500px;
+    width: 300px;
+    bottom: 25px;
+    right: 25px;
+    position: fixed;
+}

@@ -60,7 +60,7 @@ const mails = [
     {
         title: 'Outlook',
         subtitle: 'Happy new year from Outlook 🎉',
-        time: '14:34',
+        time: '10:34',
         logo: outlook,
         text: 'Mailer was granted access to your google calendar via mobile device',
         read: true
@@ -68,7 +68,7 @@ const mails = [
     {
         title: 'Google',
         subtitle: 'Security Alert',
-        time: '15:21',
+        time: '5:21',
         logo: gmail,
         text: 'Mailer was granted access to your google calendar via mobile device',
         read: false
@@ -76,7 +76,7 @@ const mails = [
     {
         title: 'Office',
         subtitle: 'Enjoy Office365 Premium',
-        time: '17:36',
+        time: '7:36',
         logo: office,
         text: 'Exactly 3 months since you signed up for Office365 from your windows 10 PC',
         read: false

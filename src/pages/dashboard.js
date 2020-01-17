@@ -4,6 +4,7 @@ import Sidebar from '../components/Sidebar'
 import { Welcome, Inbox } from '../components/Subject'
 import View from '../components/View'
 import Modals from '../components/Modals'
+import NotificationTab from '../components/NotificationTab'
 import styles from '../styles/dashboard.module.css'
 import ShouldRender from '@bit/lekanmedia.shared-ui.internal.should-render'
 
