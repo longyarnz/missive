@@ -37,7 +37,7 @@ export default function Login() {
                     <p>{error}</p>
                     <input type="email" name="email" placeholder="Email Address" {...attrs} />
                     <input type="password" name="password" placeholder="Create a Password" {...attrs} />
-                    <Link to="/reset">Forgot password</Link>
+                    <Link to="/forgot">Forgot password</Link>
                     <div>
                         <input type="submit" value="Login" />
                         <span>

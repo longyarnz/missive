@@ -3,9 +3,9 @@ import { Link } from 'gatsby'
 import styles from '../styles/form.module.css'
 import caption from '../images/forgot.png'
 
-export default function ForgotPassword() {
+export default function SendLink() {
     const [success, setSuccess] = useState(null);
-    const className = `${styles['section']} container mx-auto`;
+    const className = `${styles['section']} ${styles['sent']} container mx-auto`;
 
     const resetPassword = e => {
         e.preventDefault();
@@ -19,14 +19,11 @@ export default function ForgotPassword() {
             </div>
 
             <div>
-                <h1>Let's get you back into <br /> your account.</h1>
-                <h2>Enter the email you registered your <br /> account with.</h2>
+                <h1>We’ve sent you a <br /> password reset link.</h1>
+                <h2>Click the reset link in the email to <br /> create a new password for your account.</h2>
                 <form method="post" onSubmit={resetPassword}>
-                    <p id={styles['success']}>{success}</p>
-                    <input type="email" name="email" placeholder="Email Address" required />
-                    <input className={styles['reset']} type="submit" value="Send reset password link"/>
                     <footer className="text-center">
-                        <Link to="/login">Back to log in</Link>
+                        <Link to="/login">Resend Link</Link>
                     </footer>
                 </form>
             </div>

@@ -24,6 +24,7 @@ const confirmPassword = e => {
             e.setCustomValidity(`Passwords don't match`);
             e.classList.remove('border-green');
             e.classList.add('border', 'border-red');
+            e.focus();
         });
     }
 
